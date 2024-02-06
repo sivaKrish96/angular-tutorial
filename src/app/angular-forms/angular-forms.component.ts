@@ -23,28 +23,24 @@ export class AngularFormsComponent implements OnInit {
         streetname: "kovilpatti",
       }
     }
+
+    // here if not initialize like this it will throw an error due to the HTML rendering doesn't wait
+    // for the data so you need to provide the initial value or default value.
+    this.personal = {
+      formValues: {}
+    };
   }
 
   onSubmit(formValue: NgForm) {
     console.log(formValue)
-    this.personal.formValues = formValue.controls
-
-    this.personal.firstName = formValue.controls['fname'].value;
-    this.personal.lastName = formValue.controls['lname'].value;
-    this.personal.emailid = formValue.controls['email'].value;
-    this.personal.privacy = formValue.controls['privacy'].value;
+    this.personal = {
+      formValues: formValue?.controls
+    };
   }
 }
 
 class PersonalDetails {
-  firstName: string = "";
-  lastName: string = "";
-  emailid: string = "";
-  privacy: boolean = false;
-  doorno: number = 0;
-  streetname: string = ""
-  formValues: object = {}
-
+  formValues: object = {};
 }
 
 
