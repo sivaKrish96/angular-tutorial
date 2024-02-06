@@ -1,0 +1,28 @@
+<h3>Angular-Forms Template Driven</h3>
+<form #sampleform="ngForm" (submit)="onSubmit(sampleform)">
+    <label for="fname">First Name:</label>
+    <input type="text" name="fname" [(ngModel)]="contact.firstName" />
+
+    <label for="lname">Last Name:</label>
+    <input type="text" name="lname" [(ngModel)]="contact.lastName" />
+
+    <label for="email">Email ID:</label>
+    <input type="email" name="email" [(ngModel)]="contact.emailid" />
+
+    <div class="nested-form-group" ngModelGroup="address">
+        <label for="doorno">Door No:</label>
+        <input name="doorno" [(ngModel)]="contact.address.doorno" />
+
+        <label for="streetname">Street Name:</label>
+        <input name="streetname" [(ngModel)]="contact.address.streetname" />
+    </div>
+
+    <div class="checkbox_wrapper">
+        <input type="checkbox" name="privacy" ngModel />
+        <label for="privacy">Agree the Privacy Policy</label>
+    </div>
+
+    <button type="submit">SUBMIT</button>
+</form>
+
+<app-form-child *ngIf="formValues !== undefined" [forms]="formValues"></app-form-child>

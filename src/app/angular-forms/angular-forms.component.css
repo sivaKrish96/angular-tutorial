@@ -1,0 +1,23 @@
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 30%;
+    justify-content: left;
+    align-items: flex-start;
+}
+
+.checkbox_wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.nested-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 30%;
+    justify-content: left;
+    align-items: flex-start;
+}

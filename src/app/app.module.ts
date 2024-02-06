@@ -11,6 +11,8 @@ import { ParentoneComponent } from './parentone/parentone.component';
 import { ChildoneComponent } from './childone/childone.component';
 import { OnchangesParentComponent } from './onchanges-parent/onchanges-parent.component';
 import { OnchangesChildComponent } from './onchanges-child/onchanges-child.component';
+import { AngularFormsComponent } from './angular-forms/angular-forms.component';
+import { FormChildComponent } from './form-child/form-child.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,8 @@ import { OnchangesChildComponent } from './onchanges-child/onchanges-child.compo
     ChildoneComponent,
     OnchangesParentComponent,
     OnchangesChildComponent,
+    AngularFormsComponent,
+    FormChildComponent,
   ],
   imports: [
     BrowserModule,
