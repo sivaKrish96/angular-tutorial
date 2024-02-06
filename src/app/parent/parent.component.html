@@ -1,0 +1,9 @@
+<h3>parent Component</h3>
+<form>
+<label for="carname">Car Name:</label>
+<input type="text" name="carname" [(ngModel)]="carName" />
+<button type="button" (click)="addCarName()">Add Car</button>
+</form>
+
+<br><br>
+<app-child [carsInput]="cars" ></app-child>
