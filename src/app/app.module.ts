@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FormComponent } from './form/form.component';
 import { ListComponent } from './list/list.component';
 import { ParentComponent } from './parent/parent.component';
@@ -13,6 +13,7 @@ import { OnchangesParentComponent } from './onchanges-parent/onchanges-parent.co
 import { OnchangesChildComponent } from './onchanges-child/onchanges-child.component';
 import { AngularFormsComponent } from './angular-forms/angular-forms.component';
 import { FormChildComponent } from './form-child/form-child.component';
+import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
 
 @NgModule({
   declarations: [
@@ -27,10 +28,12 @@ import { FormChildComponent } from './form-child/form-child.component';
     OnchangesChildComponent,
     AngularFormsComponent,
     FormChildComponent,
+    ReactiveFormsComponent,
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

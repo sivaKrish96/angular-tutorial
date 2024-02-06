@@ -1,0 +1,17 @@
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 30%;
+    justify-content: left;
+    align-items: flex-start;
+}
+
+.nested-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 30%;
+    justify-content: left;
+    align-items: flex-start;
+}
