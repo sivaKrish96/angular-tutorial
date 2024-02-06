@@ -1,5 +1,11 @@
 <h1>App Component</h1>
 <app-form></app-form>
+<br>
 <app-list></app-list>
+<br>
 <app-parent></app-parent>
+<br>
 <app-parentone></app-parentone>
+<br>
+<input type="checkbox" [(ngModel)]="destroy_boolean" />
+<app-onchanges-parent *ngIf="destroy_boolean!==true"></app-onchanges-parent>
