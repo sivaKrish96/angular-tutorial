@@ -14,6 +14,8 @@ import { OnchangesChildComponent } from './onchanges-child/onchanges-child.compo
 import { AngularFormsComponent } from './angular-forms/angular-forms.component';
 import { FormChildComponent } from './form-child/form-child.component';
 import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
+import { FormValidationComponent } from './form-validation/form-validation.component';
+import { FormValidationReactiveComponent } from './form-validation-reactive/form-validation-reactive.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +31,8 @@ import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.componen
     AngularFormsComponent,
     FormChildComponent,
     ReactiveFormsComponent,
+    FormValidationComponent,
+    FormValidationReactiveComponent,
   ],
   imports: [
     BrowserModule,

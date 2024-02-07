@@ -1,0 +1,31 @@
+<h3>form-validation works!</h3>
+<!-- 
+contactForm inbuild having the property name called valid if any one of the field was not satisfied
+the form validation of the default html validation this property turn from true state to false state.
+-->
+<form #contactForm="ngForm" (submit)="onSubmit(contactForm)" ngNativeValidate>
+    <label for="fname">First Name:</label>
+    <!-- here we added the templateVariable called firstname and then using that template variable to
+         access the valid property to display the error message on the browser view.
+          and another one property called touched we have to use this one also to throw an error.
+          and use the another one property called dirty when you click also you may need to type something
+          in the field then only it becomes true.     
+    -->
+    <input name="fname" type="text" #firstname="ngModel" [(ngModel)]="details.firstName" required />
+    <span style="color: red;" *ngIf="!firstname.valid" >Invaid First Name</span>
+
+    <label for="lname">Last Name:</label>
+    <input name="lname" type="text" [(ngModel)]="details.lastName" />
+    <!-- here the ngModelGroup attribute was used to tell the angular this particular block of the html was nested
+            Form group
+    -->
+    <div class="nested-form-group" ngModelGroup="address">
+        <label for="city">City:</label>
+        <input name="city" type="text" [(ngModel)]="details.address.city" />
+
+        <label for="state">State:</label>
+        <input name="state" type="text" [(ngModel)]="details.address.state" />
+    </div>
+    <!-- here we are using the contactForm valid to disable or enable this submit button -->
+    <button type="submit" [disabled]="!contactForm.valid">SUBMIT</button>
+</form>
