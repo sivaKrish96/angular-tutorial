@@ -1,1 +1,21 @@
 <p>form-validation-reactive works!</p>
+<form [formGroup]="contactForm" (submit)="onSubmit()">
+    <label for="fname">First Name:</label>
+    <input name="fname" type="text" formControlName="firstName" />
+    <span *ngIf="!firstname?.valid && (firstname?.touched && firstname?.dirty)">
+        First Name id Invalid
+    </span>
+
+    <label for="lname">Last Name:</label>
+    <input name="lname" type="text" formControlName="lastName" />
+
+    <div class="nested-form-group" formGroupName="address">
+        <label for="city">City Name:</label>
+        <input name="city" type="text" formControlName="city" />
+
+        <label for="state">State Name:</label>
+        <input name="state" type="text" formControlName="state" />
+    </div>
+
+    <button type="submit" [disabled]="!contactForm.valid">Apply</button>
+</form>
