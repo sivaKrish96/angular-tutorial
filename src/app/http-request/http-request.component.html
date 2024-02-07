@@ -1,4 +1,13 @@
 <p>http-request works!</p>
+<form [formGroup]="postForm" method="post" (submit)="onSubmit()">
+    <label for="fname">First Name:</label>
+    <input type="text" name="fname" formControlName="firstName" />
+
+    <label for="email">Email:</label>
+    <input type="email" name="email" formControlName="email" />
+
+    <button type="submit">SUBMIT</button>
+</form>
 <ul>
-    <li *ngFor="let user of users">{{user.name}}</li>
+    <li *ngFor="let user of users">{{user.name}} | {{user.email}}</li>
 </ul>
